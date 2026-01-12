@@ -14,17 +14,26 @@ npm create vite@latest
 # PASSO 3 REDUX:  
 `npm install redux react-redux`  
 
+`npm install react react-dom`
+
+`npm install @reduxjs/toolkit`
+
+`npm install react-router-dom`
+
 # PASSO 4 STORE:
 PACKAGE.JSON:  
   "dependencies": {
     ...
+    "@reduxjs/toolkit": "^2.11.2",
+    "react-dom": "^19.2.3",
     "react-redux": "^9.2.0",
+    "react-router-dom": "^7.12.0",
     "redux": "^5.0.1"
     
-CRIAR STORE:
-adicionados arquivos: `store.ts`, `Counter.tsx`  
+CRIAR STORE
+CRIAR SLICES
 
-
+# PASSO 5 MODIFICAR MAIN.TSX
 
 
 
