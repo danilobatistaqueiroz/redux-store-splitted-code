@@ -7,18 +7,20 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setCurrency, setValue, getValue, getPrice } from './priceSlice'
 
 import { useNavigate } from 'react-router-dom';
-
 import { Link } from 'react-router-dom';
 
-
 function App() {
+
+  
+
   const navigate = useNavigate();
 
   const [count, setCount] = useState(0)
   
   const price:string = useSelector(getPrice);
   const value:number = useSelector(getValue);
-  
+
+ 
   const [inputValue, setInputValue] = useState(value);
 
   const dispatch = useDispatch();
@@ -36,15 +38,16 @@ function App() {
     navigate('/settings');
   };
 
+  const handleAbout = () => {
+    navigate('/about');
+  };
 
   return (
     <>
       <div>
-
-      <nav style={{ padding: '10px', backgroundColor: '#f0f0f0' }}>
-        <Link to="/settings" style={{ margin: '10px' }}>Settings</Link>
-      </nav>
-        
+        <nav style={{ padding: '10px', backgroundColor: '#f0f0f0' }}>
+          <Link to="/settings" style={{ margin: '10px' }}>Settings</Link>
+        </nav>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -74,6 +77,10 @@ function App() {
         </p>
       </div>
       <button onClick={handleSettings}>Settings</button>
+      <hr></hr>
+      <button onClick={handleAbout}>About</button>
+      <hr></hr>
+      <button onClick={()=>navigate('./contacts')}>Contacts</button>
     </>
   )
 }

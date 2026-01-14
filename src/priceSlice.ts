@@ -23,7 +23,6 @@ export const priceSlice = createSlice({
   }
 });
 
-
 export const { setCurrency, setValue } = priceSlice.actions;
 
 export const { getCurrency, getValue, getPrice } = priceSlice.selectors;
